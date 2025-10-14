@@ -36,41 +36,57 @@ export default function Contact() {
     }
 
     return (
-        <section id="contact" className="bg-gradient-to-r from-gray-900 to-gray-800 py-5 px-4 sm:px-8 lg:px-16 xl:px-32">
-            <div className="max-w-screen-lg mx-auto">
-                <div className="flex flex-col lg:flex-row lg:space-x-8">
-                    {/* Información de contacto con iconos */}
-                    <div className="lg:w-1/2 mb-8 lg:mb-0">
-                        <h2 className="text-4xl font-bold text-white mb-4">Contact Me</h2>
-                        <div className="space-y-6">
-                            <div className="flex items-center">
-                                <FaMapMarkerAlt className="text-green-500 text-2xl mr-4" />
-                                <div>
-                                    <h3 className="text-white font-semibold">Location</h3>
-                                    <p className="text-gray-300">Maracaibo, Venezuela</p>
-                                </div>
+        <section id="contact" className="bg-gray-900 text-white py-20">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl sm:text-5xl font-bold mb-4">Get In Touch</h2>
+                    <p className="text-gray-400 text-lg">Let&apos;s discuss your next project</p>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    {/* Información de contacto */}
+                    <div className="space-y-8">
+                        <div className="flex items-start gap-4 group">
+                            <div className="p-3 bg-gray-800 rounded-xl border border-gray-700 group-hover:border-green-500/50 transition-colors">
+                                <FaMapMarkerAlt className="text-green-500 text-xl" />
                             </div>
-                            <div className="flex items-center">
-                                <FaEnvelope className="text-green-500 text-2xl mr-4" />
-                                <div>
-                                    <h3 className="text-white font-semibold">Email</h3>
-                                    <a href="mailto:barrerafernando54@gmail.com" className="text-gray-300 hover:text-green-500 transition duration-300">barrerafernando54@gmail.com</a>
-                                </div>
+                            <div>
+                                <h3 className="text-white font-semibold text-lg mb-1">Location</h3>
+                                <p className="text-gray-400">Maracaibo, Venezuela</p>
                             </div>
-                            <div className="flex items-center">
-                                <FaPhone className="text-green-500 text-2xl mr-4" />
-                                <div>
-                                    <h3 className="text-white font-semibold">Phone</h3>
-                                    <p className="text-gray-300">+58 - 412 - 4389712</p>
-                                </div>
+                        </div>
+
+                        <div className="flex items-start gap-4 group">
+                            <div className="p-3 bg-gray-800 rounded-xl border border-gray-700 group-hover:border-green-500/50 transition-colors">
+                                <FaEnvelope className="text-green-500 text-xl" />
+                            </div>
+                            <div>
+                                <h3 className="text-white font-semibold text-lg mb-1">Email</h3>
+                                <a 
+                                    href="mailto:barrerafernando54@gmail.com" 
+                                    className="text-gray-400 hover:text-green-400 transition-colors"
+                                >
+                                    barrerafernando54@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start gap-4 group">
+                            <div className="p-3 bg-gray-800 rounded-xl border border-gray-700 group-hover:border-green-500/50 transition-colors">
+                                <FaPhone className="text-green-500 text-xl" />
+                            </div>
+                            <div>
+                                <h3 className="text-white font-semibold text-lg mb-1">Phone</h3>
+                                <p className="text-gray-400">+58 - 412 - 4389712</p>
                             </div>
                         </div>
                     </div>
+
                     {/* Formulario de contacto */}
-                    <div className="lg:w-1/2 border border-white">
-                        <form onSubmit={handleSubmit} className="bg-gray-800 rounded-lg p-6 shadow-lg">
+                    <div>
+                        <form onSubmit={handleSubmit} className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
                             <div className="mb-6">
-                                <label htmlFor="name" className="block text-gray-300 text-sm font-bold mb-2">Name</label>
+                                <label htmlFor="name" className="block text-gray-300 text-sm font-semibold mb-2">Name</label>
                                 <input
                                     type="text"
                                     id="name"
@@ -78,12 +94,12 @@ export default function Contact() {
                                     value={formData.name}
                                     onChange={handleChange}
                                     required
-                                    className="w-full border border-white px-3 py-2 text-gray-300 bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                                    className="w-full px-4 py-3 text-white bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
                                     placeholder="Your Name"
                                 />
                             </div>
                             <div className="mb-6">
-                                <label htmlFor="email" className="block text-gray-300 text-sm font-bold mb-2">Email</label>
+                                <label htmlFor="email" className="block text-gray-300 text-sm font-semibold mb-2">Email</label>
                                 <input
                                     type="email"
                                     id="email"
@@ -91,12 +107,12 @@ export default function Contact() {
                                     value={formData.email}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-3 py-2 border border-white text-gray-300 bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                                    className="w-full px-4 py-3 text-white bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
                                     placeholder="your@email.com"
                                 />
                             </div>
                             <div className="mb-6">
-                                <label htmlFor="message" className="block text-gray-300 text-sm font-bold mb-2">Message</label>
+                                <label htmlFor="message" className="block text-gray-300 text-sm font-semibold mb-2">Message</label>
                                 <textarea
                                     id="message"
                                     name="message"
@@ -104,23 +120,21 @@ export default function Contact() {
                                     onChange={handleChange}
                                     required
                                     rows={4}
-                                    className="w-full px-3 py-2 border border-white text-gray-300 bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 resize-none"
+                                    className="w-full px-4 py-3 text-white bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none transition-all"
                                     placeholder="Your message here..."
                                 ></textarea>
                             </div>
-                            {/* Botón de envío */}
-                            <div className="text-center">
-                                <button
-                                    type="submit"
-                                    disabled={isSubmitting}
-                                    className="bg-green-500 border border-white text-white font-bold py-2 px-6 rounded-md hover:bg-green-600 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 disabled:opacity-50"
-                                >
-                                    {isSubmitting ? 'Sending...' : 'Send Message'}
-                                </button>
-                            </div>
-                            {/* Mensaje de confirmación o error */}
+                            
+                            <button
+                                type="submit"
+                                disabled={isSubmitting}
+                                className="w-full bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-green-500/50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-gray-800 disabled:opacity-50 disabled:cursor-not-allowed"
+                            >
+                                {isSubmitting ? 'Sending...' : 'Send Message'}
+                            </button>
+                            
                             {submitMessage && (
-                                <p className={`mt-4 text-center ${submitMessage.includes('error') ? 'text-red-500' : 'text-green-500'}`}>
+                                <p className={`mt-4 text-center text-sm ${submitMessage.includes('error') ? 'text-red-400' : 'text-green-400'}`}>
                                     {submitMessage}
                                 </p>
                             )}

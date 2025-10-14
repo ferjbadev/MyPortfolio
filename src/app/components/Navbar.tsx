@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { FaHome, FaBriefcase, FaTools, FaEnvelope } from 'react-icons/fa'
+import { FaHome, FaBriefcase, FaTools, FaEnvelope, FaUserTie } from 'react-icons/fa'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 
 
@@ -33,16 +33,22 @@ export default function Navbar() {
 
                     {/* Menú  */}
                     <nav className="hidden md:flex space-x-8">
-                        {/* Enlace a 'Projects' con ícono y texto */}
-                        <Link href="#projects">
+                        {/* Enlace a 'Experience' con ícono y texto */}
+                        <Link href="#experience">
                             <span className="flex items-center text-white hover:bg-gray-700 px-3 py-2 rounded-md text-2xl font-medium transition duration-300 hover:scale-105">
-                                <FaBriefcase className="mr-2" /> Projects
+                                <FaUserTie className="mr-2" /> Experience
                             </span>
                         </Link>
                         {/* Enlace a 'Skills' con ícono y texto */}
                         <Link href="#skills">
                             <span className="flex items-center text-white hover:bg-gray-700 px-3 py-2 rounded-md text-2xl font-medium transition duration-300 hover:scale-105">
                                 <FaTools className="mr-2" /> Skills
+                            </span>
+                        </Link>
+                        {/* Enlace a 'Projects' con ícono y texto */}
+                        <Link href="#projects">
+                            <span className="flex items-center text-white hover:bg-gray-700 px-3 py-2 rounded-md text-2xl font-medium transition duration-300 hover:scale-105">
+                                <FaBriefcase className="mr-2" /> Projects
                             </span>
                         </Link>
                         {/* Enlace a 'Contact' con ícono y texto */}
@@ -94,14 +100,19 @@ export default function Navbar() {
                     <div className="md:hidden">
                         <nav className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                             {/* Cada enlace tiene ícono y texto */}
-                            <Link href="#projects">
+                            <Link href="#experience">
                                 <span className="flex items-center text-gray-300 hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium">
-                                    <FaBriefcase className="mr-2" /> Projects
+                                    <FaUserTie className="mr-2" /> Experience
                                 </span>
                             </Link>
                             <Link href="#skills">
                                 <span className="flex items-center text-gray-300 hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium">
                                     <FaTools className="mr-2" /> Skills
+                                </span>
+                            </Link>
+                            <Link href="#projects">
+                                <span className="flex items-center text-gray-300 hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium">
+                                    <FaBriefcase className="mr-2" /> Projects
                                 </span>
                             </Link>
                             <Link href="#contact">
