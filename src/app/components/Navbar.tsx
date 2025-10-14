@@ -23,7 +23,7 @@ export default function Navbar() {
                 <div className="flex justify-between items-center py-2">
                     <div className="flex items-center space-x-2">
                         {/* Ícono de Inicio al lado del nombre del portafolio */}
-                        <FaHome className="text-white text-2xl" />
+                        <FaHome className="text-white ml-24 text-2xl" />
                         <Link href="/">
                             <span className="text-3xl font-bold text-white hover:bg-gray-700 px-3 py-2 rounded-md transition duration-300 hover:scale-105">
                                 My Portfolio
