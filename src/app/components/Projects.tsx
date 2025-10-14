@@ -27,14 +27,50 @@ export default function Projects() {
 
     // Mapeo de imágenes personalizadas por nombre de repositorio
     const projectImages: Record<string, string> = {
-        // Aquí puedes agregar las imágenes para cada proyecto
-        // "nombre-del-repo": "URL-de-la-imagen",
-        "default": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80"
+        "MyPortfolio": "/MyPorfolio.png",
+        "OdinRestaurant": "/OdinRestaurant.png",
+        "SweetClashGame": "/SweetClashGame.png",
+        "TrillionQuest": "/TrillionQuest.png",
+        "UptmaPage": "/UptmaPage.png",
+        "VainillaLabs": "/VainillaLabs.png",
+        "default": "/foto.png"
+    }
+
+    // Mapeo de URLs de Live Demo personalizadas
+    const projectLiveUrls: Record<string, string> = {
+        "OdinRestaurant": "https://odin-restaurant-tau.vercel.app/",
+        "SweetClashGame": "https://candy-crush-game.vercel.app/",
+        "TrillionQuest": "https://trillion-quest.vercel.app/",
+        "UptmaPage": "https://uptma-page.vercel.app/",
+        "VainillaLabs": "https://vainilla-labs.vercel.app/",
+        "MyPortfolio": "https://fernando-barrera.vercel.app/",
+        // Agrega aquí más URLs de tus proyectos desplegados
+    }
+
+    // Mapeo de tecnologías usadas en cada proyecto
+    const projectTechnologies: Record<string, string[]> = {
+        "OdinRestaurant": ["Next.js", "Tailwind CSS", "TypeScript"],
+        "SweetClashGame": ["React", "TypeScript", "CSS"],
+        "TrillionQuest": ["React", "TypeScript", "Tailwind CSS"],
+        "UptmaPage": ["Next.js", "Tailwind CSS", "TypeScript"],
+        "VainillaLabs": ["React", "TypeScript", "Tailwind CSS"],
+        "MyPortfolio": ["Next.js", "TypeScript", "Tailwind CSS"],
+        // Agrega aquí las tecnologías de tus otros proyectos
     }
 
     // Función para obtener la imagen del proyecto
     const getProjectImage = (repoName: string): string => {
         return projectImages[repoName] || projectImages["default"]
+    }
+
+    // Función para obtener la URL de Live Demo
+    const getLiveUrl = (repoName: string, homepage: string | null): string | null => {
+        return projectLiveUrls[repoName] || homepage
+    }
+
+    // Función para obtener las tecnologías del proyecto
+    const getTechnologies = (repoName: string, language: string | null): string[] => {
+        return projectTechnologies[repoName] || (language ? [language] : [])
     }
 
     // Función para obtener el año de creación
@@ -131,12 +167,17 @@ export default function Projects() {
                                     {repo.description || "No description available"}
                                 </p>
 
-                                {/* Lenguaje principal */}
-                                {repo.language && (
+                                {/* Tecnologías */}
+                                {getTechnologies(repo.name, repo.language).length > 0 && (
                                     <div className="flex flex-wrap gap-2 mb-4">
-                                        <span className="px-3 py-1 text-xs font-medium rounded-full bg-gray-800/80 text-gray-300 border border-gray-700">
-                                            {repo.language}
-                                        </span>
+                                        {getTechnologies(repo.name, repo.language).map((tech, index) => (
+                                            <span
+                                                key={index}
+                                                className="px-3 py-1 text-xs font-medium rounded-full bg-gray-800/80 text-gray-300 border border-gray-700"
+                                            >
+                                                {tech}
+                                            </span>
+                                        ))}
                                     </div>
                                 )}
 
@@ -150,9 +191,9 @@ export default function Projects() {
                                     >
                                         GitHub
                                     </a>
-                                    {repo.homepage && (
+                                    {getLiveUrl(repo.name, repo.homepage) && (
                                         <a
-                                            href={repo.homepage}
+                                            href={getLiveUrl(repo.name, repo.homepage)!}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="flex-1 text-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg text-sm font-medium transition-colors"

@@ -46,10 +46,8 @@ function SkillSlider({ title, subtitle, items, icon: Icon, iconColor, gradientFr
                 <div className={`p-3 rounded-xl bg-gradient-to-br from-${gradientFrom} to-${gradientTo} shadow-lg`}>
                     <Icon className="text-2xl text-white" />
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-bold">
-                    <span className={`bg-gradient-to-r from-${gradientFrom} to-${gradientTo} bg-clip-text text-transparent`}>
-                        {title}
-                    </span>
+                <h3 className="text-2xl sm:text-3xl font-bold text-white">
+                    {title}
                 </h3>
             </div>
             <p className="text-gray-400 text-center mb-8">{subtitle}</p>
@@ -110,7 +108,7 @@ export default function Skills() {
             title: "Technical Skills",
             subtitle: "Languages, frameworks and tools I use to bring ideas to reality.",
             icon: FaCode,
-            iconColor: "green-500",
+            iconColor: "white",
             gradientFrom: "green-500",
             gradientTo: "emerald-500",
             items: [
@@ -126,7 +124,7 @@ export default function Skills() {
             title: "Soft Skills",
             subtitle: "Personal abilities that help me work effectively with teams.",
             icon: FaBrain,
-            iconColor: "blue-500",
+            iconColor: "white",
             gradientFrom: "blue-500",
             gradientTo: "cyan-500",
             items: [
@@ -134,7 +132,6 @@ export default function Skills() {
                 { name: "Teamwork", icon: FaBrain, color: "#60A5FA" },
                 { name: "Adaptability", icon: FaBrain, color: "#60A5FA" },
                 { name: "Critical thinking", icon: FaBrain, color: "#60A5FA" },
-                { name: "Time Management", icon: FaBrain, color: "#60A5FA" },
                 { name: "Problem Solving", icon: FaBrain, color: "#60A5FA" },
             ]
         },
@@ -163,7 +160,7 @@ export default function Skills() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentCategory((prev) => (prev + 1) % skillCategories.length)
-        }, 10000) // Cambia de categoría cada 10 segundos
+        }, 5000) // Cambia de categoría cada 5 segundos
         return () => clearInterval(interval)
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentCategory])
@@ -171,7 +168,7 @@ export default function Skills() {
     const currentSkillSet = skillCategories[currentCategory]
 
     return (
-        <section id="skills" className="bg-gradient-to-br from-gray-900 via-emerald-950 to-slate-950 text-white py-20">
+        <section id="skills" className="bg-gradient-to-br from-gray-900 via-emerald-950 to-slate-950 text-white py-10">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
                 <motion.div 
                     className="text-center mb-16"
