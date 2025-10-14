@@ -43,7 +43,7 @@ export default function Projects() {
         "TrillionQuest": "https://trillion-quest.vercel.app/",
         "UptmaPage": "https://uptma-page.vercel.app/",
         "VainillaLabs": "https://vainilla-labs.vercel.app/",
-        "MyPortfolio": "https://fernando-barrera.vercel.app/",
+        "MyPortfolio": "https://my-portfolio-wheat-mu.vercel.app/",
         // Agrega aquí más URLs de tus proyectos desplegados
     }
 
