@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { FaGithub, FaSpinner, FaExclamationTriangle } from "react-icons/fa"
+import { motion } from "framer-motion"
 
 // Definición de la interfaz del repositorio
 interface Repo {
@@ -75,20 +76,31 @@ export default function Projects() {
         <section id="projects" className="bg-gradient-to-br from-slate-950 via-gray-900 to-emerald-950 text-white py-20">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
                 {/* Título y subtítulo de la sección */}
-                <div className="text-center mb-16">
+                <motion.div 
+                    className="text-center mb-16"
+                    initial={{ opacity: 0, y: -30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                >
                     <h2 className="text-4xl sm:text-5xl font-bold mb-4">My GitHub Projects</h2>
                     <p className="text-gray-400 text-lg">Check out some of my recent work</p>
-                </div>
+                </motion.div>
                 {/* Grid de repositorios */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {/* Mapeo de los repositorios para crear un enlace de cada uno */}
-                    {repos.map((repo) => (
-                        <a
+                    {repos.map((repo, index) => (
+                        <motion.a
                             href={repo.html_url} // Enlace al repositorio en GitHub
                             key={repo.id}
                             className="group block bg-gray-900 rounded-xl overflow-hidden border border-gray-700 hover:border-green-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-green-500/10"
                             target="_blank"
                             rel="noopener noreferrer"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            whileHover={{ scale: 1.03 }}
                         >
                             <div className="p-6 h-full flex flex-col">
                                 <div className="flex items-start justify-between mb-3">
@@ -119,7 +131,7 @@ export default function Projects() {
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </motion.a>
                     ))}
                 </div>
             </div>

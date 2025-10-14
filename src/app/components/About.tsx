@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { FaEnvelope, FaProjectDiagram } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
@@ -11,9 +14,21 @@ const About = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           {/* Profile Image - Left side on desktop */}
-          <div className="lg:w-5/12 flex justify-center">
+          <motion.div 
+            className="lg:w-5/12 flex justify-center"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             <div className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[450px] lg:h-[450px]">
-              <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-2xl transform rotate-6"></div>
+              <motion.div 
+                className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-2xl transform rotate-6"
+                initial={{ rotate: 0 }}
+                whileInView={{ rotate: 6 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              ></motion.div>
               <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/foto.png"
@@ -24,11 +39,17 @@ const About = () => {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Content - Right side on desktop */}
           <div className="lg:w-7/12 text-center lg:text-left space-y-6">
-            <div className="space-y-3">
+            <motion.div 
+              className="space-y-3"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
               <p className="text-green-400 font-medium tracking-wide uppercase text-sm">
                 Full Stack Developer
               </p>
@@ -39,9 +60,15 @@ const About = () => {
                   Fernando Barrera
                 </span>
               </h1>
-            </div>
+            </motion.div>
 
-            <div className="space-y-4 text-gray-300 text-base sm:text-lg leading-relaxed">
+            <motion.div 
+              className="space-y-4 text-gray-300 text-base sm:text-lg leading-relaxed"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
               <p>
                 Always in constant learning, I am passionate about developing
                 modern web applications using technologies like{" "}
@@ -60,10 +87,16 @@ const About = () => {
                 programming with the imagination that storytelling awakens,
                 creating innovative solutions that make a difference.
               </p>
-            </div>
+            </motion.div>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
               <Link
                 href="#contact"
                 className="group inline-flex items-center justify-center px-8 py-3.5 text-base font-medium rounded-lg text-white bg-green-600 hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-green-500/50"
@@ -79,7 +112,7 @@ const About = () => {
                 <FaProjectDiagram className="mr-2 group-hover:scale-110 transition-transform" />
                 View My Projects
               </Link>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

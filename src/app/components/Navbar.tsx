@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { FaHome, FaBriefcase, FaTools, FaEnvelope, FaUserTie } from 'react-icons/fa'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
 
 // Componente principal del Navbar
@@ -17,11 +18,21 @@ export default function Navbar() {
 
     return (
         // Encabezado con fondo oscuro y sombra
-        <header className="bg-gray-800 shadow-xl">
+        <motion.header 
+            className="bg-gray-800 shadow-xl"
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+        >
             {/* Contenedor principal, centrado y con un límite de ancho */}
             <div className="max-w-screen-2xl mx-auto sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center py-2">
-                    <div className="flex items-center space-x-2">
+                    <motion.div 
+                        className="flex items-center space-x-2"
+                        initial={{ x: -50, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                    >
                         {/* Ícono de Inicio al lado del nombre del portafolio */}
                         <FaHome className="text-white ml-24 text-2xl" />
                         <Link href="/">
@@ -29,10 +40,15 @@ export default function Navbar() {
                                 My Portfolio
                             </span>
                         </Link>
-                    </div>
+                    </motion.div>
 
                     {/* Menú  */}
-                    <nav className="hidden md:flex space-x-8">
+                    <motion.nav 
+                        className="hidden md:flex space-x-8"
+                        initial={{ x: 50, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                    >
                         {/* Enlace a 'Experience' con ícono y texto */}
                         <Link href="#experience">
                             <span className="flex items-center text-white hover:bg-gray-700 px-3 py-2 rounded-md text-2xl font-medium transition duration-300 hover:scale-105">
@@ -76,7 +92,7 @@ export default function Navbar() {
                                 ))}
                             </div>
                         </div>
-                    </nav>
+                    </motion.nav>
 
                     {/* Botón para abrir/cerrar el menú móvil */}
                     <div className="md:hidden">
@@ -122,8 +138,8 @@ export default function Navbar() {
                             </Link>
                         </nav>
                     </div>
-                )}
+                )}  
             </div>
-        </header>
+        </motion.header>
     );
 }

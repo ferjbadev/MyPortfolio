@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import { FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -38,14 +39,26 @@ export default function Contact() {
     return (
         <section id="contact" className="bg-gradient-to-br from-emerald-950 via-slate-950 to-gray-900 text-white py-20">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-                <div className="text-center mb-16">
+                <motion.div 
+                    className="text-center mb-16"
+                    initial={{ opacity: 0, y: -30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                >
                     <h2 className="text-4xl sm:text-5xl font-bold mb-4">Get In Touch</h2>
                     <p className="text-gray-400 text-lg">Let&apos;s discuss your next project</p>
-                </div>
+                </motion.div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     {/* Información de contacto */}
-                    <div className="space-y-8">
+                    <motion.div 
+                        className="space-y-8"
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                    >
                         <div className="flex items-start gap-4 group">
                             <div className="p-3 bg-gray-800 rounded-xl border border-gray-700 group-hover:border-green-500/50 transition-colors">
                                 <FaMapMarkerAlt className="text-green-500 text-xl" />
@@ -80,10 +93,15 @@ export default function Contact() {
                                 <p className="text-gray-400">+58 - 412 - 4389712</p>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Formulario de contacto */}
-                    <div>
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                    >
                         <form onSubmit={handleSubmit} className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
                             <div className="mb-6">
                                 <label htmlFor="name" className="block text-gray-300 text-sm font-semibold mb-2">Name</label>
@@ -139,7 +157,7 @@ export default function Contact() {
                                 </p>
                             )}
                         </form>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
