@@ -116,7 +116,7 @@ export default function Projects() {
     }
 
     return (
-        <section id="projects" className="bg-gradient-to-br from-slate-950 via-gray-900 to-emerald-950 text-white py-20">
+        <section id="projects" className="bg-gradient-to-br from-slate-950 via-gray-900 to-emerald-950 text-white py-10">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
                 {/* Título y subtítulo de la sección */}
                 <motion.div 

@@ -37,7 +37,7 @@ export default function Contact() {
     }
 
     return (
-        <section id="contact" className="bg-gradient-to-br from-emerald-950 via-slate-950 to-gray-900 text-white py-20">
+        <section id="contact" className="bg-gradient-to-br from-emerald-950 via-slate-950 to-gray-900 text-white py-10">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
                 <motion.div 
                     className="text-center mb-16"

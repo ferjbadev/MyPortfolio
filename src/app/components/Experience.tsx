@@ -49,7 +49,7 @@ export default function Experience() {
     ]
 
     return (
-        <section id="experience" className="bg-gradient-to-br from-slate-950 via-emerald-950 to-gray-900 text-white py-20">
+        <section id="experience" className="bg-gradient-to-br from-slate-950 via-emerald-950 to-gray-900 text-white py-10">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
                 <motion.div 
                     className="text-center mb-16"
