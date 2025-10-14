@@ -32,7 +32,7 @@ export default function Footer() {
                         transition={{ duration: 0.5 }}
                     >
                         <h3 className="text-2xl font-bold mb-4">
-                            <span className="text-green-400">FERNANDO</span> BARRERA
+                            <span className="text-green-400">Fernando</span> Barrera
                         </h3>
                         <p className="text-gray-400 text-sm leading-relaxed mb-4">
                             Full Stack Web Developer | Working with React, TypeScript, Next.js | 

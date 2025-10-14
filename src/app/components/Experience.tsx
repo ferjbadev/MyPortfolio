@@ -15,8 +15,8 @@ export default function Experience() {
     const experiences: ExperienceItem[] = [
         {
             title: "Full Stack Developer",
-            company: "Your Company Name",
-            period: "2023 - Present",
+            company: "Exologic LLC",
+            period: "Feb 2024 - Present",
             description: [
                 "Developed and maintained web applications using Next.js and React",
                 "Implemented RESTful APIs with Node.js and Express",
@@ -25,9 +25,9 @@ export default function Experience() {
             technologies: ["Next.js", "React", "Node.js", "MongoDB", "Tailwind CSS"]
         },
         {
-            title: "Frontend Developer",
-            company: "Previous Company",
-            period: "2022 - 2023",
+            title: "Intern Frontend Developer Engineer",
+            company: "Vainilla Labs",
+            period: "Dec 2022 - Jan 2024",
             description: [
                 "Built responsive user interfaces with React and TypeScript",
                 "Optimized application performance and user experience",
@@ -36,15 +36,15 @@ export default function Experience() {
             technologies: ["React", "TypeScript", "CSS", "Git"]
         },
         {
-            title: "Junior Developer",
-            company: "First Company",
-            period: "2021 - 2022",
+            title: "Frontend Developer",
+            company: "Trillion Quest",
+            period: "Mar 2023 - Nov 2023",
             description: [
-                "Assisted in developing web applications and features",
+                "Developed and maintained web applications and features",
                 "Learned modern web development best practices",
                 "Contributed to code reviews and team discussions"
             ],
-            technologies: ["JavaScript", "HTML", "CSS", "Git"]
+            technologies: ["MongoDB", "React", "Next.js", "TypeScript", "Tailwind CSS", "Git"]
         }
     ]
 
@@ -87,26 +87,26 @@ export default function Experience() {
                                 ></motion.div>
 
                                 {/* Content card */}
-                                <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'}`}>
+                                <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
                                     <motion.div 
                                         className="bg-gray-900 rounded-xl p-6 shadow-xl border border-gray-700 hover:border-green-500/50 transition-all duration-300 group"
                                         whileHover={{ scale: 1.05 }}
                                     >
                                         {/* Header */}
                                         <div className="mb-4">
-                                            <div className={`flex items-center gap-2 mb-2 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
+                                            <div className="flex items-center gap-2 mb-2">
                                                 <FaBriefcase className="text-green-500 text-xl" />
                                                 <h3 className="text-2xl font-bold text-white">{exp.title}</h3>
                                             </div>
                                             <p className="text-xl text-green-400 font-medium mb-2">{exp.company}</p>
-                                            <div className={`flex items-center gap-2 text-gray-400 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
+                                            <div className="flex items-center gap-2 text-gray-400">
                                                 <FaCalendar className="text-sm" />
                                                 <span className="text-sm">{exp.period}</span>
                                             </div>
                                         </div>
 
                                         {/* Description */}
-                                        <ul className={`space-y-2 mb-4 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                                        <ul className="space-y-2 mb-4 text-left">
                                             {exp.description.map((desc, i) => (
                                                 <li key={i} className="text-gray-300 text-sm leading-relaxed">
                                                     • {desc}
@@ -115,7 +115,7 @@ export default function Experience() {
                                         </ul>
 
                                         {/* Technologies */}
-                                        <div className={`flex flex-wrap gap-2 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
+                                        <div className="flex flex-wrap gap-2">
                                             {exp.technologies.map((tech, i) => (
                                                 <motion.span
                                                     key={i}
