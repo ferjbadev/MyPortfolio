@@ -26,6 +26,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {/* Columna 1: Información Personal */}
                     <motion.div
+                        className="text-center md:text-left"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -48,6 +49,7 @@ export default function Footer() {
 
                     {/* Columna 2: Enlaces Rápidos */}
                     <motion.div
+                        className="text-center md:text-left"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -70,6 +72,7 @@ export default function Footer() {
 
                     {/* Columna 3: Contacto y Redes Sociales */}
                     <motion.div
+                        className="text-center md:text-left"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -79,19 +82,19 @@ export default function Footer() {
                         <div className="space-y-3 mb-6">
                             <a 
                                 href="mailto:barrerafernando54@gmail.com"
-                                className="flex items-center gap-2 text-gray-400 hover:text-green-400 transition-colors text-sm"
+                                className="flex items-center justify-center md:justify-start gap-2 text-gray-400 hover:text-green-400 transition-colors text-sm"
                             >
                                 <FaEnvelope className="text-green-500" />
                                 barrerafernando54@gmail.com
                             </a>
-                            <p className="flex items-center gap-2 text-gray-400 text-sm">
+                            <p className="flex items-center justify-center md:justify-start gap-2 text-gray-400 text-sm">
                                 <FaPhone className="text-green-500" />
                                 +58 412 4389712
                             </p>
                         </div>
                         
                         <h4 className="text-lg font-semibold mb-4">Social Media</h4>
-                        <div className="flex gap-4">
+                        <div className="flex gap-4 justify-center md:justify-start">
                             {socialLinks.map((link) => (
                                 <motion.a
                                     key={link.name}
@@ -114,7 +117,7 @@ export default function Footer() {
                 <div className="border-t border-gray-700 mt-8 pt-6">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <motion.p 
-                            className="text-gray-400 text-sm"
+                            className="text-gray-400 text-sm text-center md:text-left"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
@@ -125,7 +128,7 @@ export default function Footer() {
                         </motion.p>
                         
                         <motion.div 
-                            className="flex gap-6 text-sm"
+                            className="flex flex-col md:flex-row gap-4 md:gap-6 text-sm text-center"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}

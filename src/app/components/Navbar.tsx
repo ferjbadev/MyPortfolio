@@ -117,22 +117,22 @@ export default function Navbar() {
                         <nav className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                             {/* Cada enlace tiene ícono y texto */}
                             <Link href="#experience">
-                                <span className="flex items-center text-gray-300 hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium">
+                                <span className="flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium">
                                     <FaUserTie className="mr-2" /> Experience
                                 </span>
                             </Link>
                             <Link href="#skills">
-                                <span className="flex items-center text-gray-300 hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium">
+                                <span className="flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium">
                                     <FaTools className="mr-2" /> Skills
                                 </span>
                             </Link>
                             <Link href="#projects">
-                                <span className="flex items-center text-gray-300 hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium">
+                                <span className="flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium">
                                     <FaBriefcase className="mr-2" /> Projects
                                 </span>
                             </Link>
                             <Link href="#contact">
-                                <span className="flex items-center text-gray-300 hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium">
+                                <span className="flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium">
                                     <FaEnvelope className="mr-2" /> Contact
                                 </span>
                             </Link>
