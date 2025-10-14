@@ -37,7 +37,7 @@ export default function Footer() {
                         </h3>
                         <p className="text-gray-400 text-sm leading-relaxed mb-4">
                             Full Stack Web Developer | Working with React, TypeScript, Next.js | 
-                            Go Enthusiast | WordPress Plugin Developer | IT Consultant
+                            Tailwind CSS| MongoDB/MySQL | IT Consultant
                         </p>
                         <Link 
                             href="#contact"
