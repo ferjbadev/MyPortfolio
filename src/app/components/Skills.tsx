@@ -20,15 +20,7 @@ function SkillSlider({ title, subtitle, items, icon: Icon, iconColor, gradientFr
     const [currentSlide, setCurrentSlide] = useState(0)
     const itemsPerSlide = 6
     const totalSlides = Math.ceil(items.length / itemsPerSlide)
-
-    const nextSlide = () => {
-        setCurrentSlide((prev) => (prev + 1) % totalSlides)
-    }
-
-    const prevSlide = () => {
-        setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides)
-    }
-
+    
     const getCurrentItems = () => {
         const start = currentSlide * itemsPerSlide
         return items.slice(start, start + itemsPerSlide)
