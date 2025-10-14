@@ -1,45 +1,182 @@
 "use client";
 
-import { FaBrain, FaCode, FaLanguage } from 'react-icons/fa'
-import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
+import { FaBrain, FaCode, FaLanguage, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+import {  SiTypescript, SiReact, SiNextdotjs, SiNodedotjs, SiMongodb,  SiTailwindcss } from 'react-icons/si'
+import { motion, AnimatePresence } from 'framer-motion'
+import { IconType } from 'react-icons'
+
+interface SkillSliderProps {
+    title: string
+    subtitle: string
+    items: Array<{ name: string; icon: IconType; color: string }>
+    icon: IconType
+    iconColor: string
+    gradientFrom: string
+    gradientTo: string
+}
+
+function SkillSlider({ title, subtitle, items, icon: Icon, iconColor, gradientFrom, gradientTo }: SkillSliderProps) {
+    const [currentSlide, setCurrentSlide] = useState(0)
+    const itemsPerSlide = 6
+    const totalSlides = Math.ceil(items.length / itemsPerSlide)
+
+    const nextSlide = () => {
+        setCurrentSlide((prev) => (prev + 1) % totalSlides)
+    }
+
+    const prevSlide = () => {
+        setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides)
+    }
+
+    const getCurrentItems = () => {
+        const start = currentSlide * itemsPerSlide
+        return items.slice(start, start + itemsPerSlide)
+    }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % totalSlides)
+        }, 5000)
+        return () => clearInterval(interval)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [currentSlide, totalSlides])
+
+    return (
+        <motion.div 
+            className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-800"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+        >
+            <div className="flex items-center justify-center gap-3 mb-4">
+                <div className={`p-3 rounded-xl bg-gradient-to-br from-${gradientFrom} to-${gradientTo} shadow-lg`}>
+                    <Icon className="text-2xl text-white" />
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-bold">
+                    <span className={`bg-gradient-to-r from-${gradientFrom} to-${gradientTo} bg-clip-text text-transparent`}>
+                        {title}
+                    </span>
+                </h3>
+            </div>
+            <p className="text-gray-400 text-center mb-8">{subtitle}</p>
+            
+            <div className="relative flex items-center justify-center gap-4">
+
+                {/* Items Display */}
+                <div className="flex-1 overflow-hidden">
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={currentSlide}
+                            initial={{ opacity: 0, x: 100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -100 }}
+                            transition={{ duration: 0.3 }}
+                            className="flex flex-wrap justify-center gap-4"
+                        >
+                            {getCurrentItems().map((item, index) => (
+                                <motion.div
+                                    key={item.name}
+                                    className="flex items-center gap-2 px-4 py-2 bg-gray-800 rounded-lg border border-gray-700 hover:border-gray-600 transition-all"
+                                    initial={{ opacity: 0, scale: 0 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                                    whileHover={{ scale: 1.05, y: -5 }}
+                                >
+                                    <item.icon style={{ color: item.color }} className="text-xl" />
+                                    <span className="text-sm font-medium text-gray-300">{item.name}</span>
+                                </motion.div>
+                            ))}
+                        </motion.div>
+                    </AnimatePresence>
+                </div>
+            </div>
+
+            {/* Slide Indicators */}
+            <div className="flex justify-center gap-2 mt-6">
+                {Array.from({ length: totalSlides }).map((_, index) => (
+                    <button
+                        key={index}
+                        onClick={() => setCurrentSlide(index)}
+                        className={`w-2 h-2 rounded-full transition-all ${
+                            currentSlide === index ? `bg-${iconColor} w-8` : 'bg-gray-600'
+                        }`}
+                        aria-label={`Go to slide ${index + 1}`}
+                    />
+                ))}
+            </div>
+        </motion.div>
+    )
+}
 
 export default function Skills() {
-    const skills = [
+    const [currentCategory, setCurrentCategory] = useState(0)
+
+    const skillCategories = [
         {
-            category: "Soft Skills",
-            icon: FaBrain,
-            color: "from-blue-500 to-cyan-500",
-            items: [
-                "Effective communication",
-                "Teamwork",
-                "Adaptability",
-                "Critical thinking",
-                "Time Management"
-            ]
-        },
-        {
-            category: "Technical Skills",
+            title: "Technical Skills",
+            subtitle: "Languages, frameworks and tools I use to bring ideas to reality.",
             icon: FaCode,
-            color: "from-green-500 to-emerald-500",
+            iconColor: "green-500",
+            gradientFrom: "green-500",
+            gradientTo: "emerald-500",
             items: [
-                "JavaScript/TypeScript",
-                "React/Next.js",
-                "Node.js",
-                "Databases (MongoDB/PostgreSQL)",
-                "Tailwind CSS/Daisy UI",
-                "Git/GitHub"
+                { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+                { name: "React", icon: SiReact, color: "#61DAFB" },
+                { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF" },
+                { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+                { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+                { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
             ]
         },
         {
-            category: "Languages",
-            icon: FaLanguage,
-            color: "from-purple-500 to-pink-500",
+            title: "Soft Skills",
+            subtitle: "Personal abilities that help me work effectively with teams.",
+            icon: FaBrain,
+            iconColor: "blue-500",
+            gradientFrom: "blue-500",
+            gradientTo: "cyan-500",
             items: [
-                "Spanish - Native",
-                "English - Intermediate (B1)"
+                { name: "Effective communication", icon: FaBrain, color: "#60A5FA" },
+                { name: "Teamwork", icon: FaBrain, color: "#60A5FA" },
+                { name: "Adaptability", icon: FaBrain, color: "#60A5FA" },
+                { name: "Critical thinking", icon: FaBrain, color: "#60A5FA" },
+                { name: "Time Management", icon: FaBrain, color: "#60A5FA" },
+                { name: "Problem Solving", icon: FaBrain, color: "#60A5FA" },
+            ]
+        },
+        {
+            title: "Languages",
+            subtitle: "Languages I speak and my proficiency level.",
+            icon: FaLanguage,
+            iconColor: "purple-500",
+            gradientFrom: "purple-500",
+            gradientTo: "pink-500",
+            items: [
+                { name: "Spanish - Native", icon: FaLanguage, color: "#A855F7" },
+                { name: "English - Intermediate (B1)", icon: FaLanguage, color: "#A855F7" },
             ]
         }
     ]
+
+    const nextCategory = () => {
+        setCurrentCategory((prev) => (prev + 1) % skillCategories.length)
+    }
+
+    const prevCategory = () => {
+        setCurrentCategory((prev) => (prev - 1 + skillCategories.length) % skillCategories.length)
+    }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentCategory((prev) => (prev + 1) % skillCategories.length)
+        }, 10000) // Cambia de categoría cada 10 segundos
+        return () => clearInterval(interval)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [currentCategory])
+
+    const currentSkillSet = skillCategories[currentCategory]
 
     return (
         <section id="skills" className="bg-gradient-to-br from-gray-900 via-emerald-950 to-slate-950 text-white py-20">
@@ -55,51 +192,63 @@ export default function Skills() {
                     <p className="text-gray-400 text-lg">Technologies and abilities I work with</p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {skills.map((skillSet, index) => (
-                        <motion.div 
-                            key={index} 
-                            className="group relative bg-gray-800 rounded-2xl p-8 border border-gray-700 hover:border-transparent transition-all duration-300 overflow-hidden"
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.2 }}
-                            whileHover={{ y: -10 }}
-                        >
-                            {/* Gradient overlay on hover */}
-                            <div className={`absolute inset-0 bg-gradient-to-br ${skillSet.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
-                            
-                            {/* Content */}
-                            <div className="relative z-10">
-                                {/* Icon and Title */}
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className={`p-3 rounded-xl bg-gradient-to-br ${skillSet.color} shadow-lg`}>
-                                        <skillSet.icon className="text-2xl text-white" />
-                                    </div>
-                                    <h3 className="text-2xl font-bold text-white">{skillSet.category}</h3>
-                                </div>
+                {/* Main Category Slider */}
+                <div className="relative">
+                    {/* Category Navigation Buttons */}
+                    <button
+                        onClick={prevCategory}
+                        className="absolute left-0 top-1/2 -translate-y-1/2 z-20 p-4 rounded-full bg-gray-800 border border-gray-700 hover:border-blue-500 hover:bg-gray-700 transition-all shadow-lg"
+                        aria-label="Previous category"
+                    >
+                        <FaChevronLeft className="text-blue-400 text-xl" />
+                    </button>
 
-                                {/* Skills list */}
-                                <ul className="space-y-3">
-                                    {skillSet.items.map((item, itemIndex) => (
-                                        <motion.li 
-                                            key={itemIndex} 
-                                            className="flex items-start gap-3 text-gray-300 group/item"
-                                            initial={{ opacity: 0, x: -20 }}
-                                            whileInView={{ opacity: 1, x: 0 }}
-                                            viewport={{ once: true }}
-                                            transition={{ duration: 0.3, delay: index * 0.2 + itemIndex * 0.1 }}
-                                        >
-                                            <div className={`mt-1.5 w-1.5 h-1.5 rounded-full bg-gradient-to-r ${skillSet.color} flex-shrink-0`}></div>
-                                            <span className="text-sm leading-relaxed group-hover/item:text-white transition-colors">
-                                                {typeof item === 'string' ? item : item}
-                                            </span>
-                                        </motion.li>
-                                    ))}
-                                </ul>
-                            </div>
+                    <button
+                        onClick={nextCategory}
+                        className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-4 rounded-full bg-gray-800 border border-gray-700 hover:border-blue-500 hover:bg-gray-700 transition-all shadow-lg"
+                        aria-label="Next category"
+                    >
+                        <FaChevronRight className="text-blue-400 text-xl" />
+                    </button>
+
+                    {/* Slider Content */}
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={currentCategory}
+                            initial={{ opacity: 0, x: 100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -100 }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            <SkillSlider
+                                title={currentSkillSet.title}
+                                subtitle={currentSkillSet.subtitle}
+                                items={currentSkillSet.items}
+                                icon={currentSkillSet.icon}
+                                iconColor={currentSkillSet.iconColor}
+                                gradientFrom={currentSkillSet.gradientFrom}
+                                gradientTo={currentSkillSet.gradientTo}
+                            />
                         </motion.div>
-                    ))}
+                    </AnimatePresence>
+
+                    {/* Category Indicators */}
+                    <div className="flex justify-center gap-3 mt-8">
+                        {skillCategories.map((category, index) => (
+                            <button
+                                key={index}
+                                onClick={() => setCurrentCategory(index)}
+                                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                                    currentCategory === index
+                                        ? 'bg-blue-500 text-white'
+                                        : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
+                                }`}
+                                aria-label={`Go to ${category.title}`}
+                            >
+                                {category.title}
+                            </button>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
