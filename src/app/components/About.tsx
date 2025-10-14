@@ -4,7 +4,7 @@ import { FaEnvelope, FaProjectDiagram } from 'react-icons/fa'
 
 const About = () => {
     return (
-        <section id="about" className="bg-gray-900 text-white py-20 min-h-screen flex items-center">
+        <section id="about" className="bg-gradient-to-br from-emerald-950 via-gray-900 to-slate-950 text-white py-20 min-h-screen flex items-center">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
                 <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
                     {/* Profile Image - Left side on desktop */}
