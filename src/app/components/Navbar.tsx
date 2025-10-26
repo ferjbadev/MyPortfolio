@@ -91,7 +91,7 @@ export default function Navbar() {
                                     className={`p-2 text-gray-300 ${link.color} transition-all hover:scale-110 rounded-lg hover:bg-gray-800/50`}
                                     aria-label={`Follow me on ${link.name}`}
                                 >
-                                    <link.icon className="w-5 h-5" />
+                                    <link.icon className="w-6 h-6" />
                                 </a>
                             ))}
                         </div>
