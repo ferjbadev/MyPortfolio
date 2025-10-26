@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaWhatsapp } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 
 export default function Footer() {
@@ -18,6 +18,7 @@ export default function Footer() {
     const socialLinks = [
         { name: 'GitHub', icon: FaGithub, url: 'https://github.com/ferjbadev', color: 'hover:text-gray-300' },
         { name: 'LinkedIn', icon: FaLinkedin, url: 'https://linkedin.com/in/fernandobarreraa', color: 'hover:text-blue-400' },
+        { name: 'WhatsApp', icon: FaWhatsapp, url: 'https://wa.me/584124389712?text=Hello!%20I%27m%20interested%20in%20your%20services.', color: 'hover:text-green-400' },
     ]
 
     return (
