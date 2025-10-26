@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FaWhatsapp, FaProjectDiagram } from "react-icons/fa";
+import { FaWhatsapp, FaProjectDiagram, FaDownload } from "react-icons/fa";
 import { motion } from "framer-motion";
 import ParticlesBackground from "./ParticlesBackground";
 
@@ -109,6 +109,15 @@ const About = () => {
               >
                 <FaWhatsapp className="mr-2 group-hover:scale-110 transition-transform" />
                 Contact Me on WhatsApp
+              </a>
+
+              <a
+                href="/CV.pdf"
+                download="Fernando_Barrera_CV.pdf"
+                className="group inline-flex items-center justify-center px-8 py-3.5 text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
+              >
+                <FaDownload className="mr-2 group-hover:scale-110 transition-transform" />
+                Download CV
               </a>
 
               <Link
