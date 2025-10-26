@@ -40,12 +40,13 @@ export default function Footer() {
                             Full Stack Web Developer | Working with React, TypeScript, Next.js | 
                             Tailwind CSS| MongoDB/MySQL | IT Consultant
                         </p>
-                        <Link 
-                            href="#contact"
+                        <a 
+                            href="/CV.pdf"
+                            download="Fernando_Barrera_CV.pdf"
                             className="inline-block px-6 py-2 border border-gray-600 rounded-md text-sm hover:bg-gray-700 transition-colors"
                         >
                             View Full CV
-                        </Link>
+                        </a>
                     </motion.div>
 
                     {/* Columna 2: Enlaces Rápidos */}
