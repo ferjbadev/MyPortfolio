@@ -95,7 +95,7 @@ const About = () => {
 
             {/* Buttons */}
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4"
+              className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center lg:justify-start pt-4"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -105,27 +105,27 @@ const About = () => {
                 href="https://wa.me/584124389712?text=Hello!%20I%27m%20interested%20in%20your%20services."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center px-8 py-3.5 text-base font-medium rounded-lg text-white bg-green-600 hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-green-500/50"
+                className="group inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-lg text-white bg-green-600 hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-green-500/50"
               >
-                <FaWhatsapp className="mr-2 group-hover:scale-110 transition-transform" />
-                Contact Me on WhatsApp
+                <FaWhatsapp className="mr-2 text-base group-hover:scale-110 transition-transform" />
+                Contact Me
               </a>
 
               <a
                 href="/CV.pdf"
                 download="Fernando_Barrera_CV.pdf"
-                className="group inline-flex items-center justify-center px-8 py-3.5 text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
+                className="group inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
               >
-                <FaDownload className="mr-2 group-hover:scale-110 transition-transform" />
+                <FaDownload className="mr-2 text-base group-hover:scale-110 transition-transform" />
                 Download CV
               </a>
 
               <Link
                 href="#projects"
-                className="group inline-flex items-center justify-center px-8 py-3.5 text-base font-medium rounded-lg text-white bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-gray-600 transition-all duration-300"
+                className="group inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-lg text-white bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-gray-600 transition-all duration-300"
               >
-                <FaProjectDiagram className="mr-2 group-hover:scale-110 transition-transform" />
-                View My Projects
+                <FaProjectDiagram className="mr-2 text-base group-hover:scale-110 transition-transform" />
+                View Projects
               </Link>
             </motion.div>
           </div>
