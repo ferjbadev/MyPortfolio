@@ -3,19 +3,197 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Dark mode (default) */
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --card-bg: rgba(0, 0, 0, 0.4);
+  --border-color: #374151;
+  --scrollbar-track: #1a1a1a;
+  --scrollbar-thumb: linear-gradient(180deg, #10b981, #3b82f6);
+  --scrollbar-thumb-hover: linear-gradient(180deg, #059669, #2563eb);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html.light {
+  /* Light mode */
+  --background: #ffffff;
+  --foreground: #171717;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --border-color: #e5e7eb;
+  --scrollbar-track: #f3f4f6;
+  --scrollbar-thumb: linear-gradient(180deg, #10b981, #3b82f6);
+  --scrollbar-thumb-hover: linear-gradient(180deg, #059669, #2563eb);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Light mode specific styles */
+
+/* Text colors */
+html.light .text-white {
+  color: #111827 !important;
+}
+
+html.light .text-gray-400 {
+  color: #4b5563 !important;
+}
+
+html.light .text-gray-300 {
+  color: #6b7280 !important;
+}
+
+html.light h1,
+html.light h2,
+html.light h3,
+html.light h4,
+html.light h5,
+html.light h6 {
+  color: #111827 !important;
+}
+
+html.light p {
+  color: #374151 !important;
+}
+
+/* Background colors */
+html.light .bg-gray-900 {
+  background-color: #f9fafb !important;
+}
+
+html.light .bg-gray-800 {
+  background-color: #ffffff !important;
+}
+
+html.light .bg-black\/40 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Border colors */
+html.light .border-gray-800 {
+  border-color: #e5e7eb !important;
+}
+
+html.light .border-gray-700 {
+  border-color: #d1d5db !important;
+}
+
+html.light .border-gray-600 {
+  border-color: #9ca3af !important;
+}
+
+/* Light mode gradient backgrounds */
+html.light .bg-gradient-to-br.from-slate-950 {
+  background: linear-gradient(to bottom right, #f0f9ff, #e0f2fe, #dbeafe) !important;
+}
+
+html.light .bg-gradient-to-br.from-emerald-950 {
+  background: linear-gradient(to bottom right, #ecfdf5, #d1fae5, #a7f3d0) !important;
+}
+
+html.light .bg-gradient-to-r.from-gray-900 {
+  background: linear-gradient(to right, #f3f4f6, #e5e7eb, #f3f4f6) !important;
+}
+
+/* Light mode shadows */
+html.light .shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+html.light .shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Light mode hover effects */
+html.light .hover\:bg-gray-700:hover {
+  background-color: #f3f4f6 !important;
+}
+
+html.light .hover\:bg-gray-950:hover {
+  background-color: #e5e7eb !important;
+}
+
+/* Light mode accent colors */
+html.light .text-green-400 {
+  color: #059669 !important;
+}
+
+html.light .text-green-500 {
+  color: #10b981 !important;
+}
+
+html.light .text-blue-500 {
+  color: #3b82f6 !important;
+}
+
+html.light .text-blue-400 {
+  color: #60a5fa !important;
+}
+
+html.light .text-yellow-400 {
+  color: #f59e0b !important;
+}
+
+html.light .text-transparent {
+  color: transparent !important;
+}
+
+/* Light mode specific text elements */
+html.light span.text-white {
+  color: #111827 !important;
+}
+
+html.light a.text-gray-400 {
+  color: #4b5563 !important;
+}
+
+html.light a.text-gray-400:hover {
+  color: #059669 !important;
+}
+
+/* Light mode card text */
+html.light .line-clamp-1,
+html.light .line-clamp-2,
+html.light .line-clamp-3,
+html.light .line-clamp-4 {
+  color: #374151 !important;
+}
+
+/* Light mode navbar and footer text */
+html.light nav .text-white {
+  color: #111827 !important;
+}
+
+html.light footer .text-white {
+  color: #111827 !important;
+}
+
+html.light footer .text-gray-400 {
+  color: #6b7280 !important;
 }
