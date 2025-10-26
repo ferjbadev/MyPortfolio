@@ -33,6 +33,12 @@ export default function Projects() {
         "TrillionQuest": "/TrillionQuest.png",
         "UptmaPage": "/UptmaPage.png",
         "VainillaLabs": "/VainillaLabs.png",
+        "dailyAgenda": "/dailyAgenda.png",
+        "daily-agenda": "/dailyAgenda.png",
+        "DailyAgenda": "/dailyAgenda.png",
+        "snakeGame": "/snakeGame.png",
+        "snake-game": "/snakeGame.png",
+        "SnakeGame": "/snakeGame.png",
         "default": "/foto.png"
     }
 
@@ -44,7 +50,13 @@ export default function Projects() {
         "UptmaPage": "https://uptma-page.vercel.app/",
         "VainillaLabs": "https://vainilla-labs.vercel.app/",
         "MyPortfolio": "https://my-portfolio-wheat-mu.vercel.app/",
-        // Agrega aquí más URLs de tus proyectos desplegados
+        // Agrega las URLs cuando las despliegues
+        // "dailyAgenda": "https://tu-url-aqui.vercel.app/",
+        // "daily-agenda": "https://tu-url-aqui.vercel.app/",
+        // "DailyAgenda": "https://tu-url-aqui.vercel.app/",
+        // "snakeGame": "https://tu-url-aqui.vercel.app/",
+        // "snake-game": "https://tu-url-aqui.vercel.app/",
+        // "SnakeGame": "https://tu-url-aqui.vercel.app/",
     }
 
     // Mapeo de tecnologías usadas en cada proyecto
@@ -55,7 +67,12 @@ export default function Projects() {
         "UptmaPage": ["Next.js", "Tailwind CSS", "TypeScript"],
         "VainillaLabs": ["React", "TypeScript", "Tailwind CSS"],
         "MyPortfolio": ["Next.js", "TypeScript", "Tailwind CSS"],
-        // Agrega aquí las tecnologías de tus otros proyectos
+        "dailyAgenda": ["React", "TypeScript", "CSS"],
+        "daily-agenda": ["React", "TypeScript", "CSS"],
+        "DailyAgenda": ["React", "TypeScript", "CSS"],
+        "snakeGame": ["JavaScript", "HTML", "CSS"],
+        "snake-game": ["JavaScript", "HTML", "CSS"],
+        "SnakeGame": ["JavaScript", "HTML", "CSS"],
     }
 
     // Función para obtener la imagen del proyecto
