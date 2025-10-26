@@ -39,6 +39,12 @@ export default function Projects() {
         "snakeGame": "/snakeGame.png",
         "snake-game": "/snakeGame.png",
         "SnakeGame": "/snakeGame.png",
+        "motoStore": "/motoStore.png",
+        "MotoStore": "/motoStore.png",
+        "moto-store": "/motoStore.png",
+        "expenseTracker": "/expenseTracker.png",
+        "ExpenseTracker": "/expenseTracker.png",
+        "expense-tracker": "/expenseTracker.png",
         "default": "/foto.png"
     }
 
@@ -50,6 +56,12 @@ export default function Projects() {
         "UptmaPage": "https://uptma-page.vercel.app/",
         "VainillaLabs": "https://vainilla-labs.vercel.app/",
         "MyPortfolio": "https://my-portfolio-wheat-mu.vercel.app/",
+        "motoStore": "https://moto-store-ten.vercel.app/",
+        "MotoStore": "https://moto-store-ten.vercel.app/",
+        "moto-store": "https://moto-store-ten.vercel.app/",
+        "expenseTracker": "https://expense-tracker-six-gold-30.vercel.app/",
+        "ExpenseTracker": "https://expense-tracker-six-gold-30.vercel.app/",
+        "expense-tracker": "https://expense-tracker-six-gold-30.vercel.app/",
         // Agrega las URLs cuando las despliegues
         // "dailyAgenda": "https://tu-url-aqui.vercel.app/",
         // "daily-agenda": "https://tu-url-aqui.vercel.app/",
@@ -73,6 +85,12 @@ export default function Projects() {
         "snakeGame": ["JavaScript", "HTML", "CSS"],
         "snake-game": ["JavaScript", "HTML", "CSS"],
         "SnakeGame": ["JavaScript", "HTML", "CSS"],
+        "motoStore": ["React", "TypeScript", "Tailwind CSS"],
+        "MotoStore": ["React", "TypeScript", "Tailwind CSS"],
+        "moto-store": ["React", "TypeScript", "Tailwind CSS"],
+        "expenseTracker": ["React", "TypeScript", "Tailwind CSS"],
+        "ExpenseTracker": ["React", "TypeScript", "Tailwind CSS"],
+        "expense-tracker": ["React", "TypeScript", "Tailwind CSS"],
     }
 
     // Función para obtener la imagen del proyecto
@@ -172,11 +190,11 @@ export default function Projects() {
                             {/* Contenido del proyecto */}
                             <div className="p-6">
                                 {/* Título y año */}
-                                <div className="flex items-center justify-between mb-3">
-                                    <h3 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors line-clamp-1">
+                                <div className="mb-3">
+                                    <h3 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors text-center mb-2">
                                         {repo.name}
                                     </h3>
-                                    <span className="text-gray-400 text-sm font-medium">{getYear(repo.created_at)}</span>
+                                    <span className="text-gray-400 text-sm font-medium block text-center">{getYear(repo.created_at)}</span>
                                 </div>
 
                                 {/* Descripción */}
