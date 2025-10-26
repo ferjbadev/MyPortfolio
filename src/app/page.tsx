@@ -6,11 +6,14 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
+import BackToTop from "./components/BackToTop";
+import ThemeToggle from "./components/ThemeToggle";
 
 export default function Home() {
   return (
-    <div className="pt-16">
+    <div className="pt-16 scroll-smooth">
       <Navbar />
+      <ThemeToggle />
       <About />
       <Experience />
       <Skills />
@@ -18,5 +21,6 @@ export default function Home() {
       <Contact />
       <Footer />
       <WhatsAppButton />
+      <BackToTop />
     </div>);
 }
