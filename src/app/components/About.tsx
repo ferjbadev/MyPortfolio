@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FaEnvelope, FaProjectDiagram } from "react-icons/fa";
+import { FaWhatsapp, FaProjectDiagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 import ParticlesBackground from "./ParticlesBackground";
 
@@ -101,13 +101,15 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              <Link
-                href="#contact"
+              <a
+                href="https://wa.me/584124389712?text=Hello!%20I%27m%20interested%20in%20your%20services."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center px-8 py-3.5 text-base font-medium rounded-lg text-white bg-green-600 hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-green-500/50"
               >
-                <FaEnvelope className="mr-2 group-hover:scale-110 transition-transform" />
-                Contact Me
-              </Link>
+                <FaWhatsapp className="mr-2 group-hover:scale-110 transition-transform" />
+                Contact Me on WhatsApp
+              </a>
 
               <Link
                 href="#projects"
