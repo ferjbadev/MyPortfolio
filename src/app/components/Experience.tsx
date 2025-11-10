@@ -18,9 +18,9 @@ export default function Experience() {
             company: "Red Caribe y Amazonia",
             period: "Jan 2025 - Present",
             description: [
-                "Manage and maintain the organization's website, ensuring optimal functionality",
-                "Protection and conservation of nature in the Caribbean and Amazon regions",
-                "Develop content for environmental awareness and project dissemination"
+                "Manage and maintain the organization's website",
+                "Conservation of nature in the Caribbean and Amazon regions",
+                "Develop content for environmental awareness and dissemination"
             ],
             technologies: ["Next.js", "React", "Tailwind CSS"]
         },
@@ -61,7 +61,7 @@ export default function Experience() {
 
     return (
         <section id="experience" className="bg-gradient-to-br from-slate-950 via-emerald-950 to-gray-900 text-white py-10">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl">
                 <motion.div 
                     className="text-center mb-16"
                     initial={{ opacity: 0, y: -30 }}
@@ -70,7 +70,7 @@ export default function Experience() {
                     transition={{ duration: 0.6 }}
                 >
                     <h2 className="text-4xl sm:text-5xl font-bold mb-4">Work Experience</h2>
-                    <p className="text-gray-400 text-lg">My professional journey and achievements</p>
+                    <p className=" text-lg">My professional journey and achievements</p>
                 </motion.div>
 
                 <div className="relative">
@@ -100,17 +100,17 @@ export default function Experience() {
                                 {/* Content card */}
                                 <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
                                     <motion.div 
-                                        className="bg-gray-900 rounded-xl p-6 shadow-xl border border-gray-700 hover:border-green-500/50 transition-all duration-300 group"
+                                        className="bg-gray-900 rounded-xl cursor-pointer p-6 shadow-xl border border-white hover:border-green-500/50 transition-all duration-300 group"
                                         whileHover={{ scale: 1.05 }}
                                     >
                                         {/* Header */}
                                         <div className="mb-4">
-                                            <div className="flex items-center gap-2 mb-2">
-                                                <FaBriefcase className="text-green-500 text-xl" />
-                                                <h3 className="text-2xl font-bold text-white">{exp.title}</h3>
+                                            <div className="flex items-center gap-5 mb-2">
+                                                <FaBriefcase className="text-green-500 text-3xl" />
+                                                <h3 className="text-2xl font-bold">{exp.title}</h3>
                                             </div>
                                             <p className="text-xl text-green-400 font-medium mb-2">{exp.company}</p>
-                                            <div className="flex items-center gap-2 text-gray-400">
+                                            <div className="flex items-center gap-2">
                                                 <FaCalendar className="text-sm" />
                                                 <span className="text-sm">{exp.period}</span>
                                             </div>
