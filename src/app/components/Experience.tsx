@@ -13,6 +13,17 @@ interface ExperienceItem {
 
 export default function Experience() {
     const experiences: ExperienceItem[] = [
+            {
+            title: "Full Stack Developer",
+            company: "Exologic LLC",
+            period: "Feb 2024 - Present",
+            description: [
+                "Developed and maintained web applications using Next.js and React",
+                "Implemented RESTful APIs with Node.js and Express",
+                "Collaborated with cross-functional teams to deliver high-quality solutions"
+            ],
+            technologies: ["Next.js", "React", "Node.js", "MongoDB", "Tailwind CSS"]
+        },
         {
             title: "Full Stack Developer",
             company: "Exologic LLC",
