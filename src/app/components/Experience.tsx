@@ -14,15 +14,15 @@ interface ExperienceItem {
 export default function Experience() {
     const experiences: ExperienceItem[] = [
             {
-            title: "Full Stack Developer",
-            company: "Exologic LLC",
-            period: "Feb 2024 - Present",
+            title: "Website Manager / Full Stack Developer",
+            company: "Red Caribe y Amazonia",
+            period: "Jan 2025 - Present",
             description: [
-                "Developed and maintained web applications using Next.js and React",
-                "Implemented RESTful APIs with Node.js and Express",
-                "Collaborated with cross-functional teams to deliver high-quality solutions"
+                "Manage and maintain the organization's website, ensuring optimal functionality",
+                "Protection and conservation of nature in the Caribbean and Amazon regions",
+                "Develop content for environmental awareness and project dissemination"
             ],
-            technologies: ["Next.js", "React", "Node.js", "MongoDB", "Tailwind CSS"]
+            technologies: ["Next.js", "React", "Tailwind CSS"]
         },
         {
             title: "Full Stack Developer",
