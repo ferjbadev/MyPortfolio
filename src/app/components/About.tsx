@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaWhatsapp, FaProjectDiagram, FaDownload } from "react-icons/fa";
 import { motion } from "framer-motion";
-import ParticlesBackground from "./ParticlesBackground";
 
 const About = () => {
   return (
@@ -12,8 +11,6 @@ const About = () => {
       id="about"
       className="relative bg-gradient-to-br from-emerald-950 via-gray-900 to-slate-950 text-white py-10 min-h-screen flex items-center overflow-hidden"
     >
-      {/* Particles Background */}
-      <ParticlesBackground />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
