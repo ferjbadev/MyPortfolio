@@ -33,22 +33,33 @@ export default function Experience() {
       ],
       technologies: ["Next.js", "React", "Tailwind CSS"],
     },
+      {
+      title: "Course Platform Developer || Content Creator",
+      company: "Ser Cuidado Course Platform",
+      period: "Feb 2025 - May 2025",
+      description: [
+        "Developed and maintained the course platform",
+        "Created and managed course content",
+        "Developed content using Canva and MS Office",
+      ],
+      technologies: ["Canva", "MS Office", "HTML", "CSS"],
+    },
 
     {
       title: "Intern Frontend Developer Engineer",
       company: "Vainilla Labs",
-      period: "Dec 2022 - Jan 2024",
+      period: "Dec 2022 - Jan 2025",
       description: [
         "Built responsive user interfaces with React and TypeScript",
         "Optimized application performance and user experience",
         "Worked closely with designers to implement pixel-perfect designs",
       ],
-      technologies: ["React", "TypeScript", "CSS", "Git"],
+      technologies: ["React", "TypeScript", "Tailwind CSS", "CSS", "Git"],
     },
     {
       title: "Frontend Developer",
       company: "Trillion Quest",
-      period: "Mar 2023 - Nov 2023",
+      period: "Mar 2022 - Nov 2022",
       description: [
         "Developed and maintained web applications and features",
         "Learned modern web development best practices",
