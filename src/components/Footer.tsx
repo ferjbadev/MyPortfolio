@@ -39,7 +39,7 @@ export default function Footer() {
                         <h3 className="text-2xl font-bold mb-4">
                             <span className="text-green-400">Fernando</span> Barrera
                         </h3>
-                        <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                        <p className=" text-sm leading-relaxed mb-4">
                             Full Stack Web Developer | Working with React, TypeScript, Next.js | 
                             Tailwind CSS| MongoDB/MySQL | IT Consultant
                         </p>
@@ -66,7 +66,7 @@ export default function Footer() {
                                 <li key={link.name}>
                                     <button
                                         onClick={() => scrollToSection(link.href)}
-                                        className="text-gray-400 hover:text-green-400 transition-colors text-sm cursor-pointer hover:underline"
+                                        className=" hover:text-green-400 transition-colors text-sm cursor-pointer hover:underline"
                                     >
                                         {link.name}
                                     </button>
@@ -87,12 +87,12 @@ export default function Footer() {
                         <div className="space-y-3 mb-6">
                             <a 
                                 href="mailto:barrerafernando54@gmail.com"
-                                className="flex items-center justify-center md:justify-start gap-2 text-gray-400 hover:text-green-400 transition-colors text-sm"
+                                className="flex items-center justify-center md:justify-start gap-2  hover:text-green-400 transition-colors text-sm"
                             >
                                 <FaEnvelope className="text-green-500" />
                                 barrerafernando54@gmail.com
                             </a>
-                            <p className="flex items-center justify-center md:justify-start gap-2 text-gray-400 text-sm">
+                            <p className="flex items-center justify-center md:justify-start gap-2  text-sm">
                                 <FaPhone className="text-green-500" />
                                 +58 412 4389712
                             </p>
@@ -122,7 +122,7 @@ export default function Footer() {
                 <div className="border-t border-gray-700 mt-8 pt-6">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <motion.p 
-                            className="text-gray-400 text-sm text-center md:text-left"
+                            className=" text-sm text-center md:text-left"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
@@ -139,13 +139,13 @@ export default function Footer() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.4 }}
                         >
-                            <a href="#" className="text-gray-400 hover:text-green-400 transition-colors">
+                            <a href="#" className=" hover:text-green-400 transition-colors">
                                 Privacy Policy
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-green-400 transition-colors">
+                            <a href="#" className=" hover:text-green-400 transition-colors">
                                 Terms of Service
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-green-400 transition-colors">
+                            <a href="#" className=" hover:text-green-400 transition-colors">
                                 Cookie Settings
                             </a>
                         </motion.div>
