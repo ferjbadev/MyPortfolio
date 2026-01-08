@@ -68,30 +68,16 @@ const About = () => {
             </motion.div>
 
             <motion.div 
-              className="space-y-4 text-gray-300 text-base sm:text-lg leading-relaxed"
+              className="space-y-4 text-base sm:text-lg leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <p>
-                Always in constant learning, I am passionate about developing
-                modern web applications using technologies like{" "}
-                <span className="text-white font-medium">Next.js</span>,
-                databases (
-                <span className="text-white font-medium">
-                  Firebase, PostgreSQL, MongoDB
-                </span>
-                ), and{" "}
-                <span className="text-white font-medium">Tailwind CSS</span> to
-                create functional and visually appealing interfaces.
+                Passionate about crafting modern, high performance web applications using React, TypeScript, and Vite, i build dynamic, animated interfaces with Tailwind CSS and Framer Motion, and manage server state efficiently with React Query. My full-stack experience includes Firebase, PostgreSQL, and MongoDB, i embrace vibe-coding and AI-assisted development to innovate quickly and merge technical precision with creative storytelling
               </p>
-              <p>
-                I am a big fan of anime and reading, which inspires me to keep
-                an open and creative mind. I enjoy combining the logic of
-                programming with the imagination that storytelling awakens,
-                creating innovative solutions that make a difference.
-              </p>
+              
             </motion.div>
 
             {/* Buttons */}
