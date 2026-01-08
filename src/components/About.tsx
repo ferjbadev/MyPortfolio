@@ -15,11 +15,10 @@ const About = () => {
       id="about"
       className="relative bg-gradient-to-br from-emerald-950 via-gray-900 to-slate-950 text-white py-10 min-h-screen flex items-center overflow-hidden"
     >
-      
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           {/* Profile Image - Left side on desktop */}
-          <motion.div 
+          <motion.div
             className="lg:w-5/12 flex justify-center"
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -27,7 +26,7 @@ const About = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <div className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[450px] lg:h-[450px]">
-              <motion.div 
+              <motion.div
                 className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-2xl transform rotate-6"
                 initial={{ rotate: 0 }}
                 whileInView={{ rotate: 6 }}
@@ -48,7 +47,7 @@ const About = () => {
 
           {/* Content - Right side on desktop */}
           <div className="lg:w-7/12 text-center lg:text-left space-y-6">
-            <motion.div 
+            <motion.div
               className="space-y-3"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +66,7 @@ const About = () => {
               </h1>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="space-y-4 text-base sm:text-lg leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -75,13 +74,19 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <p>
-                Passionate about crafting modern, high performance web applications using React, TypeScript, and Vite, i build dynamic, animated interfaces with Tailwind CSS and Framer Motion, and manage server state efficiently with React Query. My full-stack experience includes Firebase, PostgreSQL, and MongoDB, i embrace vibe-coding and AI-assisted development to innovate quickly and merge technical precision with creative storytelling
+                Passionate about building web applications with React,
+                TypeScript, and Vite. I specialize in creating immersive,
+                animated interfaces using Tailwind CSS and Framer Motion, while
+                optimizing server-state management via React Query. With a
+                robust backend foundation in PostgreSQL and MongoDB, I lean into
+                vibe-coding to bridge the gap between technical precision and
+                creative storytelling. I also use AI-assisted development to
+                streamline my workflow and ship faster.
               </p>
-              
             </motion.div>
 
             {/* Buttons */}
-            <motion.div 
+            <motion.div
               className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center lg:justify-start pt-4"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
