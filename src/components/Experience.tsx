@@ -14,7 +14,7 @@ export default function Experience() {
     {
       title: "Full Stack Developer",
       company: "Exologic LLC",
-      period: "Nov 2025 - Present",
+      period: "November 2025 - Present",
       description: [
         "Developed and maintained web applications using Next.js and React",
         "Implemented RESTful APIs with Node.js and Express",
@@ -25,7 +25,7 @@ export default function Experience() {
     {
       title: "Website Manager / Full Stack Developer",
       company: "Red Caribe y Amazonia",
-      period: "Jan 2025 - Oct 2025",
+      period: "June 2025 - October 2025",
       description: [
         "Manage and maintain the organization's website",
         "Conservation of nature in the Caribbean and Amazon regions",
@@ -36,7 +36,7 @@ export default function Experience() {
       {
       title: "Course Platform Developer || Content Creator",
       company: "Ser Cuidado Course Platform",
-      period: "Feb 2025 - May 2025",
+      period: "February 2025 - May 2025",
       description: [
         "Developed and maintained the course platform",
         "Created and managed course content",
@@ -48,7 +48,7 @@ export default function Experience() {
     {
       title: "Intern Frontend Developer Engineer",
       company: "Vainilla Labs",
-      period: "Dec 2022 - Jan 2025",
+      period: "December 2022 - January 2025",
       description: [
         "Built responsive user interfaces with React and TypeScript",
         "Optimized application performance and user experience",
@@ -59,7 +59,7 @@ export default function Experience() {
     {
       title: "Frontend Developer",
       company: "Trillion Quest",
-      period: "Mar 2022 - Nov 2022",
+      period: "March 2022 - November 2022",
       description: [
         "Developed and maintained web applications and features",
         "Learned modern web development best practices",
