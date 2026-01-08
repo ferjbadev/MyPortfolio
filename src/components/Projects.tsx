@@ -24,7 +24,7 @@ export default function Projects() {
             html_url: "https://color-palette-manager-one.vercel.app/",
             live_url: "https://color-palette-manager-one.vercel.app/",
             created_at: "2025-09-17",
-            image: "/ColorPalette.webp"
+            image: "/ColorPalette.png"
         },
            {
             id: 15,
