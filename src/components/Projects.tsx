@@ -16,16 +16,36 @@ interface Project {
 export default function Projects() {
     // Datos estáticos de los proyectos
     const projects: Project[] = [
-        {
-            id: 1,
-            name: "MyPortfolio",
-            description: "My personal website! Built with Next.js, TypeScript and Tailwind CSS to showcase my projects and skills.",
-            technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-            html_url: "https://github.com/ferjbadev/MyPortfolio",
-            created_at: "2025-01-07",
-            live_url: "https://my-portfolio-wheat-mu.vercel.app/",
-            image: "/MyPorfolio.png"
+           {
+            id: 13,
+            name: "Color Palette Manager",
+            description: "A modern, offline-first color palette management application built with React, TypeScript, and Tailwind CSS. Create, edit, and export beautiful color palettes for your design projects",
+            technologies: ["React", "TypeScript", "Tailwind CSS", "React Hook Form"],
+            html_url: "https://color-palette-manager-one.vercel.app/",
+            live_url: "https://color-palette-manager-one.vercel.app/",
+            created_at: "2025-09-17",
+            image: "/ColorPalette.webp"
         },
+           {
+            id: 15,
+            name: "TrillionQuest",
+            description: "Revolutionize your productivity by integrating advanced AI into your daily operations. Our platform automates manual processes with precision and speed, delivering smarter results and seamless efficiency for the modern enterprise.",
+            technologies: ["JavaScript"],
+            html_url: "https://www.trillionquest.com/",
+            created_at: "2025-01-03",
+            live_url: "https://www.trillionquest.com/",
+            image: "/TrillionQuest.png"
+        },
+         {
+            id: 3,
+            name: "FocusSpace",
+            description: "FocusSpace is a productivity-focused Chrome Extension designed to help you reclaim your attention. It removes digital clutter: distracting tabs, social media history, and time-wasting content to prepare your browser environment for Deep Work.",
+            technologies: ["TypeScript", "Chrome Extension"],
+            html_url: "https://github.com/joseorono/clean-my-history",
+            created_at: "2025-11-26",
+            image: "/focusSpace.png"
+        },
+       
         {
             id: 2,
             name: "AngelisNutricion",
@@ -33,17 +53,10 @@ export default function Projects() {
             technologies: ["Vite", "React", "Tailwind CSS", "Framer Motion"],
             html_url: "https://github.com/ferjbadev/AngelisNutricion",
             created_at: "2025-11-30",
+            live_url: "https://angelis-nutricion.vercel.app/",
             image: "/Nutricion.png"
         },
-        {
-            id: 3,
-            name: "FocusSpace",
-            description: "FocusSpace is a productivity-focused Chrome Extension designed to help you reclaim your attention. It removes digital clutter: distracting tabs, social media history, and time-wasting content to prepare your browser environment for Deep Work.",
-            technologies: ["TypeScript", "Chrome Extension"],
-            html_url: "https://github.com/joseorono/clean-my-history",
-            created_at: "2025-11-26",
-            image: "/foto.png"
-        },
+       
         {
             id: 4,
             name: "ONG-Red Caribe y Amazonia",
@@ -51,17 +64,10 @@ export default function Projects() {
             technologies: ["TypeScript", "Next.js"],
             html_url: "https://ong-amazonia.vercel.app/",
             created_at: "2025-11-12",
+            live_url: "https://ong-amazonia.vercel.app/",
             image: "/Caribe.png"
         },
-        {
-            id: 5,
-            name: "IKPonteGuapa",
-            description: "At IK Ponte Guapa, we bring your style to life through the art of sewing. From custom-made dresses to delicate alterations, every stitch is crafted with passion, precision, and a touch of elegance",
-            technologies: ["TypeScript", "React", "Tailwind CSS"],
-            html_url: "https://github.com/ferjbadev/IKPonteGuapa",
-            created_at: "2025-10-29",
-            image: "/PonteGuapa.png"
-        },
+        
         {
             id: 6,
             name: "MotoStore",
@@ -88,8 +94,19 @@ export default function Projects() {
             description: "A classic Snake game built with React and Vite, optimized for fast performance and a modern browser experience. The goal is simple: eat as much food as possible without crashing into yourself.",
             technologies: ["React", "Vite", "JavaScript"],
             html_url: "https://github.com/ferjbadev/snakeGame",
+            live_url: "https://snake-game-ochre-gamma.vercel.app/",
             created_at: "2025-10-24",
             image: "/snakeGame.png"
+        },
+        {
+            id: 5,
+            name: "IKPonteGuapa",
+            description: "At IK Ponte Guapa, we bring your style to life through the art of sewing. From custom-made dresses to delicate alterations, every stitch is crafted with passion, precision, and a touch of elegance",
+            technologies: ["TypeScript", "React", "Tailwind CSS"],
+            html_url: "https://github.com/ferjbadev/IKPonteGuapa",
+            live_url: "https://ik-ponte-guapa.vercel.app/",
+            created_at: "2025-10-29",
+            image: "/PonteGuapa.png"
         },
         {
             id: 9,
@@ -97,6 +114,7 @@ export default function Projects() {
             description: "A modern and intuitive calendar application built with React and Vite, designed to help users efficiently manage and organize their events. The app allows users to create, edit, and delete events.",
             technologies: ["React", "Vite", "TypeScript"],
             html_url: "https://github.com/ferjbadev/DailyAgenda",
+            live_url: "https://daily-agenda-chi.vercel.app/",
             created_at: "2025-10-24",
             image: "/dailyAgenda.png"
         },
@@ -130,15 +148,7 @@ export default function Projects() {
             live_url: "https://uptma-page.vercel.app/",
             image: "/UptmaPage.png"
         },
-        {
-            id: 13,
-            name: "color-palette-manager",
-            description: "A modern, offline-first color palette management application built with React, TypeScript, and Tailwind CSS. Create, edit, and export beautiful color palettes for your design projects",
-            technologies: ["TypeScript"],
-            html_url: "https://color-palette-manager-one.vercel.app/",
-            created_at: "2025-09-17",
-            image: "/ColorPalette.webp"
-        },
+     
         {
             id: 14,
             name: "VainillaLabs",
@@ -149,16 +159,17 @@ export default function Projects() {
             live_url: "https://vainilla-labs.vercel.app/",
             image: "/VainillaLabs.png"
         },
-        {
-            id: 15,
-            name: "TrillionQuest",
-            description: "JavaScript project for Trillion Quest platform",
-            technologies: ["JavaScript"],
-            html_url: "https://github.com/ferjbadev/TrillionQuest",
-            created_at: "2025-01-03",
-            live_url: "https://trillion-quest.vercel.app/",
-            image: "/TrillionQuest.png"
-        }
+     
+         {
+            id: 1,
+            name: "MyPortfolio",
+            description: "My personal website! Built with Vite, TypeScript and Tailwind CSS to showcase my projects and skills.",
+            technologies: ["React","Vite", "TypeScript", "Tailwind CSS"],
+            html_url: "https://github.com/ferjbadev/MyPortfolio",
+            created_at: "2025-01-07",
+            live_url: "https://my-portfolio-wheat-mu.vercel.app/",
+            image: "/MyPorfolio.png"
+        },
     ]
 
     // Función para obtener el año de creación
@@ -248,7 +259,7 @@ export default function Projects() {
                                             rel="noopener noreferrer"
                                             className="flex-1 text-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg text-sm font-medium transition-colors"
                                         >
-                                            Live Demo
+                                            See it in Action
                                         </a>
                                     )}
                                 </div>
