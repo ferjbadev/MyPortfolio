@@ -6,6 +6,7 @@ import Projects from './components/Projects'
 import Skills from './components/Skrills'
 import Footer from './components/Footer'
 import Contact from './components/Contact'
+import WhatsappButton from './components/WhatsappButton'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     <div>
       <Navbar />
       <About />
+      <WhatsappButton />
       <Experience />
       <Projects />
       <Skills />
