@@ -30,18 +30,12 @@ export default function Projects() {
         "TrillionQuest": "/TrillionQuest.png",
         "UptmaPage": "/UptmaPage.png",
         "VainillaLabs": "/VainillaLabs.png",
-        "dailyAgenda": "/dailyAgenda.png",
-        "daily-agenda": "/dailyAgenda.png",
         "DailyAgenda": "/dailyAgenda.png",
         "snakeGame": "/snakeGame.png",
-        "snake-game": "/snakeGame.png",
-        "SnakeGame": "/snakeGame.png",
-        "motoStore": "/motoStore.png",
         "MotoStore": "/motoStore.png",
-        "moto-store": "/motoStore.png",
         "expenseTracker": "/expenseTracker.png",
-        "ExpenseTracker": "/expenseTracker.png",
-        "expense-tracker": "/expenseTracker.png",
+        "AngelisNutricion": "/Nutricion.png",
+        "IKPonteGuapa": "/PonteGuapa.png",
         "default": "/foto.png"
     }
 
