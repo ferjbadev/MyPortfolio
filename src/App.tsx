@@ -7,9 +7,9 @@ function App() {
 
   return (
     <div>
-      <Experience />
       <Navbar />
       <About />
+      <Experience />
     </div>
   )
 }
