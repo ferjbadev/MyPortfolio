@@ -184,11 +184,11 @@ export default function Projects() {
                                     <h3 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors text-center mb-2">
                                         {repo.name}
                                     </h3>
-                                    <span className="text-gray-400 text-sm font-medium block text-center">{getYear(repo.created_at)}</span>
+                                    <span className=" text-sm font-medium block text-center">{getYear(repo.created_at)}</span>
                                 </div>
 
                                 {/* Descripción */}
-                                <p className="text-gray-400 text-sm mb-4 leading-relaxed line-clamp-4">
+                                <p className=" text-sm mb-4 leading-relaxed line-clamp-4">
                                     {repo.description || "No description available"}
                                 </p>
 
