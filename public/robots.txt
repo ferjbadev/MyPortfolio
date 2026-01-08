@@ -1,0 +1,9 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://my-portfolio-wheat-mu.vercel.app/sitemap.xml
+
+# Disallow specific paths (if any)
+# Disallow: /api/
