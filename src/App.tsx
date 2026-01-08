@@ -16,8 +16,8 @@ function App() {
       <About />
       <WhatsappButton />
       <Experience />
-      <Projects />
       <Skills />
+      <Projects />
       <Contact />
       <Footer />
     </div>
