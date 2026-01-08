@@ -28,9 +28,9 @@ export default function Projects() {
         },
            {
             id: 15,
-            name: "TrillionQuest",
+            name: "Trillion Quest",
             description: "Revolutionize your productivity by integrating advanced AI into your daily operations. Our platform automates manual processes with precision and speed, delivering smarter results and seamless efficiency for the modern enterprise.",
-            technologies: ["JavaScript"],
+            technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
             html_url: "https://www.trillionquest.com/",
             created_at: "2025-01-03",
             live_url: "https://www.trillionquest.com/",
@@ -38,9 +38,9 @@ export default function Projects() {
         },
          {
             id: 3,
-            name: "FocusSpace",
+            name: "Focus Space",
             description: "FocusSpace is a productivity-focused Chrome Extension designed to help you reclaim your attention. It removes digital clutter: distracting tabs, social media history, and time-wasting content to prepare your browser environment for Deep Work.",
-            technologies: ["TypeScript", "Chrome Extension"],
+            technologies: ["TypeScript", "React", "Tailwind CSS", "Material UI"],
             html_url: "https://github.com/joseorono/clean-my-history",
             created_at: "2025-11-26",
             image: "/focusSpace.png"
@@ -48,7 +48,7 @@ export default function Projects() {
        
         {
             id: 2,
-            name: "AngelisNutricion",
+            name: "Angelis Nutricion",
             description: "Nutritionist Landing Page - Vite | Tailwind CSS | Framer Motion. Modern, responsive website with smooth animations and professional design for health and wellness services.",
             technologies: ["Vite", "React", "Tailwind CSS", "Framer Motion"],
             html_url: "https://github.com/ferjbadev/AngelisNutricion",
@@ -70,7 +70,7 @@ export default function Projects() {
         
         {
             id: 6,
-            name: "MotoStore",
+            name: "Moto Store",
             description: "MotoStore is a modern eCommerce platform focused on selling motorcycles and motorcycle accessories. Built with Vite, React, Tailwind CSS, and ShadCN/UI, it aims to deliver a fast, elegant, and mobile-friendly shopping experience.",
             technologies: ["Vite", "React", "Tailwind CSS", "ShadCN/UI"],
             html_url: "https://github.com/ferjbadev/MotoStore",
@@ -80,7 +80,7 @@ export default function Projects() {
         },
         {
             id: 7,
-            name: "expenseTracker",
+            name: "Expense Tracker",
             description: "A modern and responsive expense tracking application built with Vite and Tailwind CSS. This project helps users easily manage their personal finances by allowing them to add, edit, and categorize expenses.",
             technologies: ["Vite", "React", "Tailwind CSS"],
             html_url: "https://github.com/ferjbadev/expenseTracker",
@@ -90,7 +90,7 @@ export default function Projects() {
         },
         {
             id: 8,
-            name: "snakeGame",
+            name: "Snake Game",
             description: "A classic Snake game built with React and Vite, optimized for fast performance and a modern browser experience. The goal is simple: eat as much food as possible without crashing into yourself.",
             technologies: ["React", "Vite", "JavaScript"],
             html_url: "https://github.com/ferjbadev/snakeGame",
@@ -100,7 +100,7 @@ export default function Projects() {
         },
         {
             id: 5,
-            name: "IKPonteGuapa",
+            name: "IK Ponte Guapa",
             description: "At IK Ponte Guapa, we bring your style to life through the art of sewing. From custom-made dresses to delicate alterations, every stitch is crafted with passion, precision, and a touch of elegance",
             technologies: ["TypeScript", "React", "Tailwind CSS"],
             html_url: "https://github.com/ferjbadev/IKPonteGuapa",
@@ -110,7 +110,7 @@ export default function Projects() {
         },
         {
             id: 9,
-            name: "DailyAgenda",
+            name: "Daily Agenda",
             description: "A modern and intuitive calendar application built with React and Vite, designed to help users efficiently manage and organize their events. The app allows users to create, edit, and delete events.",
             technologies: ["React", "Vite", "TypeScript"],
             html_url: "https://github.com/ferjbadev/DailyAgenda",
@@ -120,7 +120,7 @@ export default function Projects() {
         },
         {
             id: 10,
-            name: "OdinRestaurant",
+            name: "Odin Restaurant",
             description: "Welcome to Valhalla Bistro, where Norse gods restore their strength. Blending mythology's grandeur with modern design using Vite, Tailwind CSS, and DaisyUI, this digital space embodies Asgard's majesty.",
             technologies: ["Vite", "React", "Tailwind CSS", "DaisyUI"],
             html_url: "https://github.com/ferjbadev/OdinRestaurant",
@@ -130,7 +130,7 @@ export default function Projects() {
         },
         {
             id: 11,
-            name: "SweetClashGame",
+            name: "Sweet Clash Game",
             description: "Sweet Clash is a colorful match-3 and match-4 puzzle game where players combine sweets to earn points, trigger special effects, and progress through increasingly challenging levels.",
             technologies: ["React", "TypeScript", "CSS"],
             html_url: "https://github.com/ferjbadev/SweetClashGame",
@@ -140,7 +140,7 @@ export default function Projects() {
         },
         {
             id: 12,
-            name: "UptmaPage",
+            name: "Uptma Page",
             description: "A modern academic management system for Universidad Politécnica Territorial de Maracaibo 'Kléber Ramírez' (UPTMA), built with React, Tailwind CSS, and Firebase to streamline student, course, and grading management.",
             technologies: ["React", "Tailwind CSS", "Firebase"],
             html_url: "https://github.com/ferjbadev/UptmaPage",
@@ -151,7 +151,7 @@ export default function Projects() {
      
         {
             id: 14,
-            name: "VainillaLabs",
+            name: "Vainilla Labs",
             description: "Vainilla Labs is a financial platform designed to offer personalized financing plans and savings fund management solutions. It allows users to easily track their contributions, manage investments, and monitor their financial progress.",
             technologies: ["React", "TypeScript", "Tailwind CSS"],
             html_url: "https://github.com/ferjbadev/VainillaLabs",
@@ -162,7 +162,7 @@ export default function Projects() {
      
          {
             id: 1,
-            name: "MyPortfolio",
+            name: "My Portfolio",
             description: "My personal website! Built with Vite, TypeScript and Tailwind CSS to showcase my projects and skills.",
             technologies: ["React","Vite", "TypeScript", "Tailwind CSS"],
             html_url: "https://github.com/ferjbadev/MyPortfolio",
