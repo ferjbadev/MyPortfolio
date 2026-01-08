@@ -115,7 +115,7 @@ export default function Skills() {
 
                 {/* Skills Categories in Columns */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    {skillCategories.map((category, index) => (
+                    {skillCategories.map((category) => (
                         <SkillCategory
                             key={category.title}
                             title={category.title}
