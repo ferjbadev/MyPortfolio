@@ -78,7 +78,7 @@ const About = () => {
                 TypeScript, and Vite. I specialize in creating immersive,
                 animated interfaces using Tailwind CSS and Framer Motion, while
                 optimizing server-state management via React Query. With a
-                robust backend foundation in PostgreSQL and MongoDB, I lean into
+                robust backend foundation in PostgreSQL, I lean into
                 vibe-coding to bridge the gap between technical precision and
                 creative storytelling. I also use AI-assisted development to
                 streamline my workflow and ship faster.
