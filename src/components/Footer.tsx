@@ -41,7 +41,7 @@ export default function Footer() {
                         </h3>
                         <p className=" text-sm leading-relaxed mb-4">
                             Full Stack Web Developer | Working with React, TypeScript, Next.js | 
-                            Tailwind CSS| PostgreSQL | IT Consultant
+                            Tailwind CSS | MongoDB | PostgreSQL | IT Consultant
                         </p>
                         <a 
                             href="/CV.pdf"

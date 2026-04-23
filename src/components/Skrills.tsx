@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { FaBrain, FaCode, FaLanguage } from 'react-icons/fa'
-import { SiTypescript, SiReact, SiNextdotjs, SiNodedotjs, SiPostgresql, SiTailwindcss } from 'react-icons/si'
+import { SiTypescript, SiReact, SiNextdotjs, SiMongodb, SiPostgresql, SiTailwindcss } from 'react-icons/si'
 import type { IconType } from 'react-icons'
 
 interface SkillCategory {
@@ -65,7 +65,7 @@ export default function Skills() {
                 { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
                 { name: "React", icon: SiReact, color: "#61DAFB" },
                 { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF" },
-                { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+                { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
                 { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
                 { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
             ]

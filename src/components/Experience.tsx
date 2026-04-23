@@ -20,7 +20,7 @@ export default function Experience() {
         "Implemented RESTful APIs with Node.js and Express",
         "Collaborated with cross-functional teams to deliver high-quality solutions",
       ],
-      technologies: ["Next.js", "React", "Node.js", "PostgreSQL", "Tailwind CSS"],
+      technologies: ["Next.js", "React", "Node.js", "MongoDB", "PostgreSQL", "Tailwind CSS"],
     },
     {
       title: "Website Manager / Full Stack Developer",
@@ -66,6 +66,7 @@ export default function Experience() {
         "Contributed to code reviews and team discussions",
       ],
       technologies: [
+        "MongoDB",
         "PostgreSQL",
         "React",
         "Next.js",
